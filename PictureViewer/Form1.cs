@@ -18,7 +18,6 @@ namespace PictureViewer
             this.AcceptButton = showButton;
             this.CancelButton = closeButton;
             checkBox1.Checked = true;
-            resetImage.Enabled = false;
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -46,7 +45,6 @@ namespace PictureViewer
         private void clearButton_Click(object sender, EventArgs e)
         {
             pictureBox1.Image = null;
-            resetImage.Enabled = false;
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -75,6 +73,7 @@ namespace PictureViewer
         {
             this.Height = 350;
             this.Width = 600;
+            pictureBox1.BackColor = Color.Gray;
         }
     }
 }
